@@ -1,0 +1,85 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using MySql.Data.MySqlClient;
+
+namespace TinaliAutoLight
+{
+    public partial class Manager_home : Form
+    {
+        public Manager_home()
+        {
+            InitializeComponent();
+        }
+
+        private void Manager_home_Load(object sender, EventArgs e)
+        {
+            ManagerDetails manager = new ManagerDetails();
+            //label2.Text = manager.getMname();
+            FillGridView();
+            textBox5.Enabled = false;
+            textBox5.Text = "Id Auto Number";
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(textBox1.Text!="" && textBox2.Text!="" && textBox3.Text!="" && textBox4.Text!="" && comboBox1.Text != "")
+            {
+                try
+                {
+                    MySqlConnection conn = new MySqlConnection(@"datasource=127.0.0.1;port=3306;SslMode=none;username=root;password=;database=talight;");
+                    string query = "insert into `spareparts`(`model`,`part`,`type`,`price`,`instock`) values('" + textBox1.Text.Trim() + "','" + textBox2.Text.Trim() + "','" + comboBox1.Text.Trim() + "','" + textBox3.Text.Trim() + "','" + textBox4.Text.Trim() + "')";
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                    MessageBox.Show("The item is successfully added !");
+                    textBox1.Clear();
+                    textBox2.Clear();
+                    textBox3.Clear();
+                    textBox4.Clear();
+                    comboBox1.SelectedIndex = -1;
+                    FillGridView();
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+            }
+            else
+            {
+                MessageBox.Show("u should fill all the fields");
+            }
+        }
+        /*The function tht fills the datagridview*/
+        void FillGridView()
+        {
+            MySqlConnection conn = new MySqlConnection(@"datasource=127.0.0.1;port=3306;SslMode=none;username=root;password=;database=talight;");
+            MySqlDataAdapter sda = new MySqlDataAdapter("select * from spareparts ", conn);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            dataGridView1.DataSource = dt;
+        }
+
+        /*The function tht fills the text boxes when a gridview cell is clicked */
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
+                textBox5.Text = row.Cells[0].Value.ToString();
+                textBox1.Text = row.Cells[1].Value.ToString();
+                textBox2.Text = row.Cells[2].Value.ToString();
+                comboBox1.Text = row.Cells[3].Value.ToString();
+                textBox3.Text = row.Cells[4].Value.ToString();
+                textBox4.Text = row.Cells[5].Value.ToString();
+            }
+        }
+    }
+}
