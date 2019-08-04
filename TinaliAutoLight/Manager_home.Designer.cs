@@ -31,12 +31,12 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            BunifuAnimatorNS.Animation animation3 = new BunifuAnimatorNS.Animation();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Manager_home));
+            BunifuAnimatorNS.Animation animation4 = new BunifuAnimatorNS.Animation();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            BunifuAnimatorNS.Animation animation4 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation3 = new BunifuAnimatorNS.Animation();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Manager_home));
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.slide_panel = new System.Windows.Forms.Panel();
@@ -135,6 +135,9 @@
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -367,6 +370,7 @@
             // 
             // additem_panel
             // 
+            this.additem_panel.Controls.Add(this.button1);
             this.additem_panel.Controls.Add(this.label14);
             this.additem_panel.Controls.Add(this.additem);
             this.additem_panel.Controls.Add(this.itemlist);
@@ -413,10 +417,10 @@
             this.additem.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.additem.Image = ((System.Drawing.Image)(resources.GetObject("additem.Image")));
             this.additem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.additem.Location = new System.Drawing.Point(70, 410);
+            this.additem.Location = new System.Drawing.Point(70, 393);
             this.additem.Name = "additem";
             this.additem.Padding = new System.Windows.Forms.Padding(5);
-            this.additem.Size = new System.Drawing.Size(282, 91);
+            this.additem.Size = new System.Drawing.Size(282, 75);
             this.additem.TabIndex = 98;
             this.additem.Text = "Add - item";
             this.additem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -425,6 +429,7 @@
             // 
             // itemlist
             // 
+            this.itemlist.AllowUserToAddRows = false;
             this.itemlist.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.itemlist.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.bunifuTransition2.SetDecoration(this.itemlist, BunifuAnimatorNS.DecorationType.None);
@@ -803,22 +808,22 @@
             // 
             this.bunifuTransition1.AnimationType = BunifuAnimatorNS.AnimationType.VertSlide;
             this.bunifuTransition1.Cursor = null;
-            animation3.AnimateOnlyDifferences = true;
-            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
-            animation3.LeafCoeff = 0F;
-            animation3.MaxTime = 1F;
-            animation3.MinTime = 0F;
-            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
-            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
-            animation3.MosaicSize = 0;
-            animation3.Padding = new System.Windows.Forms.Padding(0);
-            animation3.RotateCoeff = 0F;
-            animation3.RotateLimit = 0F;
-            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
-            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
-            animation3.TimeCoeff = 0F;
-            animation3.TransparencyCoeff = 0F;
-            this.bunifuTransition1.DefaultAnimation = animation3;
+            animation4.AnimateOnlyDifferences = true;
+            animation4.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.BlindCoeff")));
+            animation4.LeafCoeff = 0F;
+            animation4.MaxTime = 1F;
+            animation4.MinTime = 0F;
+            animation4.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicCoeff")));
+            animation4.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicShift")));
+            animation4.MosaicSize = 0;
+            animation4.Padding = new System.Windows.Forms.Padding(0);
+            animation4.RotateCoeff = 0F;
+            animation4.RotateLimit = 0F;
+            animation4.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.ScaleCoeff")));
+            animation4.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.SlideCoeff")));
+            animation4.TimeCoeff = 0F;
+            animation4.TransparencyCoeff = 0F;
+            this.bunifuTransition1.DefaultAnimation = animation4;
             // 
             // deleteitem_panel
             // 
@@ -1031,6 +1036,7 @@
             // 
             // paid_orders_panel
             // 
+            this.paid_orders_panel.Controls.Add(this.button3);
             this.paid_orders_panel.Controls.Add(this.cancel_order_btn);
             this.paid_orders_panel.Controls.Add(this.label23);
             this.paid_orders_panel.Controls.Add(this.make_unPaid_btn);
@@ -1063,7 +1069,7 @@
             this.cancel_order_btn.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cancel_order_btn.Image = ((System.Drawing.Image)(resources.GetObject("cancel_order_btn.Image")));
             this.cancel_order_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cancel_order_btn.Location = new System.Drawing.Point(70, 439);
+            this.cancel_order_btn.Location = new System.Drawing.Point(70, 414);
             this.cancel_order_btn.Name = "cancel_order_btn";
             this.cancel_order_btn.Padding = new System.Windows.Forms.Padding(5);
             this.cancel_order_btn.Size = new System.Drawing.Size(282, 87);
@@ -1097,7 +1103,7 @@
             this.make_unPaid_btn.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.make_unPaid_btn.Image = ((System.Drawing.Image)(resources.GetObject("make_unPaid_btn.Image")));
             this.make_unPaid_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.make_unPaid_btn.Location = new System.Drawing.Point(70, 345);
+            this.make_unPaid_btn.Location = new System.Drawing.Point(70, 320);
             this.make_unPaid_btn.Name = "make_unPaid_btn";
             this.make_unPaid_btn.Padding = new System.Windows.Forms.Padding(5);
             this.make_unPaid_btn.Size = new System.Drawing.Size(282, 88);
@@ -1109,6 +1115,7 @@
             // 
             // paid_dataGridView1
             // 
+            this.paid_dataGridView1.AllowUserToAddRows = false;
             this.paid_dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.paid_dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.bunifuTransition2.SetDecoration(this.paid_dataGridView1, BunifuAnimatorNS.DecorationType.None);
@@ -1235,6 +1242,7 @@
             // 
             // unp_order_panel
             // 
+            this.unp_order_panel.Controls.Add(this.button2);
             this.unp_order_panel.Controls.Add(this.unp_cancelorder_btn);
             this.unp_order_panel.Controls.Add(this.label27);
             this.unp_order_panel.Controls.Add(this.unp_make_btn);
@@ -1267,10 +1275,10 @@
             this.unp_cancelorder_btn.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.unp_cancelorder_btn.Image = ((System.Drawing.Image)(resources.GetObject("unp_cancelorder_btn.Image")));
             this.unp_cancelorder_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.unp_cancelorder_btn.Location = new System.Drawing.Point(70, 439);
+            this.unp_cancelorder_btn.Location = new System.Drawing.Point(70, 419);
             this.unp_cancelorder_btn.Name = "unp_cancelorder_btn";
             this.unp_cancelorder_btn.Padding = new System.Windows.Forms.Padding(5);
-            this.unp_cancelorder_btn.Size = new System.Drawing.Size(282, 87);
+            this.unp_cancelorder_btn.Size = new System.Drawing.Size(282, 77);
             this.unp_cancelorder_btn.TabIndex = 100;
             this.unp_cancelorder_btn.Text = "Cancel Order";
             this.unp_cancelorder_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -1301,10 +1309,10 @@
             this.unp_make_btn.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.unp_make_btn.Image = ((System.Drawing.Image)(resources.GetObject("unp_make_btn.Image")));
             this.unp_make_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.unp_make_btn.Location = new System.Drawing.Point(70, 345);
+            this.unp_make_btn.Location = new System.Drawing.Point(70, 336);
             this.unp_make_btn.Name = "unp_make_btn";
             this.unp_make_btn.Padding = new System.Windows.Forms.Padding(5);
-            this.unp_make_btn.Size = new System.Drawing.Size(282, 88);
+            this.unp_make_btn.Size = new System.Drawing.Size(282, 78);
             this.unp_make_btn.TabIndex = 98;
             this.unp_make_btn.Text = "Mark as Paid";
             this.unp_make_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -1313,6 +1321,7 @@
             // 
             // unp_dataGridView
             // 
+            this.unp_dataGridView.AllowUserToAddRows = false;
             this.unp_dataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.unp_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.bunifuTransition2.SetDecoration(this.unp_dataGridView, BunifuAnimatorNS.DecorationType.None);
@@ -1441,22 +1450,22 @@
             // 
             this.bunifuTransition2.AnimationType = BunifuAnimatorNS.AnimationType.Transparent;
             this.bunifuTransition2.Cursor = null;
-            animation4.AnimateOnlyDifferences = true;
-            animation4.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.BlindCoeff")));
-            animation4.LeafCoeff = 0F;
-            animation4.MaxTime = 1F;
-            animation4.MinTime = 0F;
-            animation4.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicCoeff")));
-            animation4.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicShift")));
-            animation4.MosaicSize = 0;
-            animation4.Padding = new System.Windows.Forms.Padding(0);
-            animation4.RotateCoeff = 0F;
-            animation4.RotateLimit = 0F;
-            animation4.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.ScaleCoeff")));
-            animation4.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.SlideCoeff")));
-            animation4.TimeCoeff = 0F;
-            animation4.TransparencyCoeff = 1F;
-            this.bunifuTransition2.DefaultAnimation = animation4;
+            animation3.AnimateOnlyDifferences = true;
+            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
+            animation3.LeafCoeff = 0F;
+            animation3.MaxTime = 1F;
+            animation3.MinTime = 0F;
+            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
+            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
+            animation3.MosaicSize = 0;
+            animation3.Padding = new System.Windows.Forms.Padding(0);
+            animation3.RotateCoeff = 0F;
+            animation3.RotateLimit = 0F;
+            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
+            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
+            animation3.TimeCoeff = 0F;
+            animation3.TransparencyCoeff = 1F;
+            this.bunifuTransition2.DefaultAnimation = animation3;
             // 
             // bunifuElipse1
             // 
@@ -1473,6 +1482,48 @@
             this.bunifuElipse3.ElipseRadius = 20;
             this.bunifuElipse3.TargetControl = this.additem;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.bunifuTransition1.SetDecoration(this.button1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.button1, BunifuAnimatorNS.DecorationType.None);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(70, 486);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(274, 68);
+            this.button1.TabIndex = 100;
+            this.button1.Text = "Generate item-list pdf";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.bunifuTransition1.SetDecoration(this.button2, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.button2, BunifuAnimatorNS.DecorationType.None);
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(70, 501);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(274, 68);
+            this.button2.TabIndex = 101;
+            this.button2.Text = "Generate order-list pdf";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.bunifuTransition1.SetDecoration(this.button3, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.button3, BunifuAnimatorNS.DecorationType.None);
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(70, 501);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(282, 68);
+            this.button3.TabIndex = 102;
+            this.button3.Text = "Generate Paid order-list pdf";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // Manager_home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1487,11 +1538,11 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.paid_orders_panel);
             this.Controls.Add(this.additem_panel);
             this.Controls.Add(this.updateitems_panel);
             this.Controls.Add(this.deleteitem_panel);
             this.Controls.Add(this.unp_order_panel);
-            this.Controls.Add(this.paid_orders_panel);
             this.bunifuTransition1.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -1623,5 +1674,8 @@
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label manager_name;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }

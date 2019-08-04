@@ -61,6 +61,7 @@ namespace TinaliAutoLight
             slide_panel.Top = user_list_btn.Top;
             User_list users_list = new User_list();
             users_list.Show();
+            this.Hide();
         }
 
 

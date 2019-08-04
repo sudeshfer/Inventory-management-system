@@ -494,14 +494,14 @@
             this.panel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1413, 32);
+            this.panel2.Size = new System.Drawing.Size(1424, 32);
             this.panel2.TabIndex = 66;
             // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1413, 811);
+            this.ClientSize = new System.Drawing.Size(1424, 811);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.close_btn);
             this.Controls.Add(this.button9);

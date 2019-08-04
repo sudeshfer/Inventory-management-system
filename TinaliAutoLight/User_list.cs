@@ -35,6 +35,8 @@ namespace TinaliAutoLight
 
         private void close_btn_Click(object sender, EventArgs e)
         {
+            Admin_home admin = new Admin_home();
+            admin.Show();
             this.Close();
         }
     }
